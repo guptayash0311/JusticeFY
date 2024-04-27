@@ -19,5 +19,5 @@ from django.urls import path,include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', admin.site.urls)
+    path('api/', include('JusticeFY_app.urls'))
 ]

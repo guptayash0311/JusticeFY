@@ -1,6 +1,8 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 class Lawyer(models.Model):
+    user=models.ForeignKey(User,on_delete=models.SET_NULL,null=True)
     CNR = models.URLField(max_length=200)
     ClientName = models.CharField(max_length=100)
     CaseStatus = models.CharField(max_length=50)
