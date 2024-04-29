@@ -1,12 +1,11 @@
-import React from 'react'
-
-
-
+import React from "react";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
     <>
-    <h1>JusticeFY Frontend</h1>
+      <Navbar />
+      <h1>JusticeFY Frontend</h1>
     </>
   );
 }
