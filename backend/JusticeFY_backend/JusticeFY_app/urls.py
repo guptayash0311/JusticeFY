@@ -4,4 +4,6 @@ from JusticeFY_app import views
 
 urlpatterns = [
     path('lawyers/',views.getLawyers, name="getLawyers"),
+    path('register/',views.createUser, name="createUser"),
+    path('login/',views.loginUser, name="loginUser"),
 ]
