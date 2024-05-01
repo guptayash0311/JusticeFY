@@ -4,6 +4,7 @@ from django.contrib.admin.sites import site
 from .models import Lawyer
 from .models import PhysicalJudge
 from .models import VirtualJudge
+from .models import Cases
 from django.contrib import admin
 from JusticeFY_app.models import Lawyer 
 from JusticeFY_app.models import PhysicalJudge;
@@ -26,4 +27,5 @@ admin.site.register(PhysicalJudge)
 # class VirtualJudgeAdmin(admin.ModelAdmin):
 #     list_display = ('CNR', 'CaseStatus', 'Lawyer_1', 'Lawyer_2', 'virtualcourt')
 admin.site.register(VirtualJudge)
+admin.site.register(Cases)
 

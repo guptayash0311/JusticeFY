@@ -1,0 +1,91 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Register</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="{% static 'utils.css' %}">
+
+  </head>
+  <body>
+    {% comment %} <h2>User Registration</h2> {% endcomment %}
+    {% comment %} <form method="post">
+        {% csrf_token %}
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username"><br>
+        
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"><br>
+        
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password"><br>
+
+        <label for="id">User Type:</label><br>
+        <select name="id" id="id">
+            <option value="1">Lawyer</option>
+            <option value="2">Physical Judge</option>
+            <option value="3">Virtual Judge</option>
+        </select><br>
+        
+        <button type="submit">Register</button>
+    </form> {% endcomment %}
+    
+    {% comment %} <p>Already have an account? <a href="/api/login/">Login here</a>.</p> {% endcomment %}
+    <div class="auth">
+      <div class="left"></div>
+      <div class="right">
+        <main class="box">
+          <h2>Register</h2>
+          <form method="post">
+            {% csrf_token %} 
+            <div class="inputBox">
+              <label for="username">Username</label>
+              <input
+                type="text"
+                name="username"
+                id="username"
+                placeholder="Enter your username"
+                required
+              />
+            </div>
+            <div class="inputBox">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Enter your password"
+                required
+              />
+            </div>
+            <div class="inputBox">
+              <label for="password">Password</label>
+              <input
+                type="password"
+                name="password"
+                id="password"
+                placeholder="Enter your password"
+                required
+              />
+            </div>
+            <div class="User_Type">
+              <label for="id">User Type:</label><br />
+              <select name="id" id="id">
+                <option value="1">Lawyer</option>
+                <option value="2">Physical Judge</option>
+                <option value="3">Virtual Judge</option>
+              </select>
+            </div>
+            <button type="submit" style="float: left">Submit</button>
+            <a class="button" href="/api/login" style="float: left">Login</a>
+          </form>
+        </main>
+      </div>
+    </div>
+	<script src="index.js"></script>
+  </body>
+</html>

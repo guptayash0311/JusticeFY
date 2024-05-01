@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JusticeFY-Lawyer</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>Lawyer Cart</h1>
+    {% if cases %}
+        <ul>
+            {% for case in cases %}
+                <li>{{ case.CNR }} - {{ case.Case_Type }} - {{case.Filing_Date}} - {{case.Judge_Username}}</li>
+                <!-- Display other case details as needed -->
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No cases found.</p>
+    {% endif %}
+  </body>
+</html>

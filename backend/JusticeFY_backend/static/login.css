@@ -1,0 +1,101 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    font-family: sans-serif;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2; /* Added a background color */
+  }
+  
+  header {
+    display: none;
+  }
+  
+  .box {
+    background-color: rgba(63, 61, 61, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.8);
+    margin: auto;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    max-width: 400px; /* Added max-width for responsiveness */
+    width: 50%; /* Added width for responsiveness */
+  }
+  
+  .box h2 {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 30px; /* Increased margin-bottom */
+  }
+  
+  .box .inputBox label {
+    color: #fff;
+  }
+  
+  .box .inputBox input {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    font-size: 16px; /* Reduced font size for better readability */
+    letter-spacing: 1px; /* Reduced letter-spacing for better readability */
+    margin-bottom: 20px; /* Reduced margin-bottom for better spacing */
+    outline: none;
+    padding: 8px 0; /* Reduced padding for better alignment */
+    width: 100%;
+  }
+  .User_Type {
+    margin-bottom: 20px; /* Adjust margin-bottom for spacing */
+  }
+  
+  .User_Type label {
+    color: #ffffff; /* Text color */
+    font-weight: bold; /* Make label text bold */
+  }
+  .User_Type select {
+    width: 100%; /* Full width */
+    padding: 8px; /* Padding */
+    border: none; /* Remove default border */
+    border-bottom: 1px solid #fff; /* Add bottom border */
+    background-color: transparent; /* Transparent background */
+    color: #000000; /* Text color */
+    font-size: 16px; /* Font size */
+    outline: none; /* Remove outline */
+    margin-top: 5px; /* Adjust top margin */
+  }
+  
+  .box input[type="submit"],
+  .box button[type="submit"],
+  a.button {
+    background: #03a9f4;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 600;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-right: 10px; /* Adjusted margin-right */
+  }
+  
+  .box input[type="submit"]:hover,
+  .box button[type="submit"]:hover,
+  a.button:hover {
+    opacity: 0.8;
+  }
+  
+  #tsparticles {
+    display: none; /* Removed fixed positioning to hide it for now */
+  }
