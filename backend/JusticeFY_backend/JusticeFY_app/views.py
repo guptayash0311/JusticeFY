@@ -77,21 +77,17 @@ def logoutUser(request):
 def Home(request):
     return render(request,'index.html')
 
+def cnr_search(request):
+    if request.method == 'POST':
+        cnr=request.POST.get('cnr')
+        test=True
+        if(test==True):
+            cases=Cases.objects.filter(CNR=cnr)
+            return render(request,'Case_details.html',{'cases': cases})
+        else:
+            return redirect('/api/')
+    return render(request,'cnr_search.html')
+    
 
-# @login_required
-# def Cart(request):
-#     user = request.user
-#     if user.is_authenticated:
-#         # print("Current User:", user)
-#         # print("User Groups:", user.groups.all())
-#         # if user.groups.filter(name='Lawyers').exists():
-#         #     return render(request, 'lawyer_cart.html')
-#         # elif user.groups.filter(name='Physical_Judge').exists():
-#         #     return render(request, 'Physical_Judge_Cart.html')
-#         # elif user.groups.filter(name='Virtual_Judge').exists():
-#         #     return render(request, 'Virtual_Judge_Cart.html')
-#         # else:
-#         #     return redirect('api/')
-#     else:
-#         return redirect(reverse('api/login/'))
+        
     

@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JusticeFY</title>
+    <link rel="stylesheet" href="{% static 'popup.css' %}">
     <link rel="stylesheet" href="{% static 'hero.css' %}">
     <link rel="stylesheet" href="{% static 'aboutus.css' %}">
     <link rel="stylesheet" href="{% static 'footer.css' %}">
@@ -55,9 +56,8 @@
                 </li>
               </ul>
   
-              <button class="btn btn-light" type="submit">
-                Enter CNR
-              </button>
+              <a class="mx-3" href="/api/login">My Workspace</a>
+              <a class="mx-3" href="/api/case_details">Enter CNR</a>
             </div>
           </div>
         </nav>
@@ -65,10 +65,7 @@
     {% comment %} Hero {% endcomment %}
     <div class="parallax-wrapper">
       <div class="hero parallax-content">
-        {% comment %} <img
-          src="https://plus.unsplash.com/premium_photo-1661394715096-46bb7027fc27?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          alt="Photo of city during a sunset by Sterling Davis"> {% endcomment %}
-          {% comment %} <img src="./court-transformed.jpeg.jpg" alt="Hero Image"> {% endcomment %}
+          <img src="{% static 'hero1.jpg' %}" alt="Hero Image">
         <div class="hero__title">
           <h1>JusticeFY</h1>
           <p>
@@ -89,8 +86,8 @@
             </td>
             <td>
               <span class="title">About Us</span>
-              <span class="sub-title">JusticeFY is a web-based platform that aims to provide a helping hand to the Indian judicial system. Our platform provides system for proceeding of court hearings with the help of video conferencing and robust security.</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              <span class="sub-title">
+              <p>JusticeFY is a web-based platform that aims to provide a helping hand to the Indian judicial system. Our platform provides system for proceeding of court hearings with the help of video conferencing and robust security.</p>
               <a href="#OurMission" class="btn1">Our Mission</a>
             </td>
           </tr>
@@ -102,10 +99,10 @@
           <tr>
             <td>
               <span class="title">Our Mission</span>
-              <span class="sub-title">- Increasing the accessibility of justice with transparency regardless of socioeconomic values.
-                - Reducing the enormous volume of backlogged court cases that has accumulated over the years and helping to reduce the pendency rate and endless postponements
-                - Saving on the expenses of facilities of physical court, and allow for faster processing of court cases so that late case hearings are avoided.</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              <span class="sub-title"> 
+              <p>-Increasing the accessibility of justice with transparency regardless of socioeconomic values.</p>
+              <p>-Reducing the enormous volume of backlogged court cases that has accumulated over the years and helping to reduce the pendency rate and endless postponements.</p>
+              <p>-Saving on the expenses of facilities of physical court, and allow for faster processing of court cases so that late case hearings are avoided.</p>
             </td>
             <td>
               <img src="https://images.unsplash.com/photo-1499083097717-a156f85f0516?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=751&q=80" alt="AboutUs" />
@@ -119,29 +116,24 @@
           <div class="row">
             <div class="col-sm-12 col-md-6">
               <h6>About</h6>
-              <p class="text-justify">Scanfcode.com <i>CODE WANTS TO BE SIMPLE </i> is an initiative to help the upcoming programmers with the code. Scanfcode focuses on providing the most efficient code or snippets as the code wants to be simple. We will help programmers build up concepts in different programming languages that include C, C++, Java, HTML, CSS, Bootstrap, JavaScript, PHP, Android, SQL, and Algorithm.</p>
+              <p class="text-justify">JusticeFY is a web-based platform that aims to provide a helping hand to the Indian judicial system. Our platform provides system for proceeding of court hearings with the help of video conferencing and robust security.</p>
             </div>
 
             <div class="col-xs-6 col-md-3">
-              <h6>Categories</h6>
+              <h6>Tech-Stack</h6>
               <ul class="footer-links">
-                <li><a href="http://scanfcode.com/category/c-language/">C</a></li>
-                <li><a href="http://scanfcode.com/category/front-end-development/">UI Design</a></li>
-                <li><a href="http://scanfcode.com/category/back-end-development/">PHP</a></li>
-                <li><a href="http://scanfcode.com/category/java-programming-language/">Java</a></li>
-                <li><a href="http://scanfcode.com/category/android/">Android</a></li>
-                <li><a href="http://scanfcode.com/category/templates/">Templates</a></li>
+                <li><a href="https://docs.djangoproject.com/en/5.0/">Django</a></li>
+                <li><a href="https://www.django-rest-framework.org/">Django Rest Framework</a></li>
               </ul>
-            </div>
+            </div> 
 
             <div class="col-xs-6 col-md-3">
-              <h6>Quick Links</h6>
+              <h6>Team Members</h6>
               <ul class="footer-links">
-                <li><a href="http://scanfcode.com/about/">About Us</a></li>
-                <li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
-                <li><a href="http://scanfcode.com/contribute-at-scanfcode/">Contribute</a></li>
-                <li><a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a></li>
-                <li><a href="http://scanfcode.com/sitemap/">Sitemap</a></li>
+                <li><a href="https://www.linkedin.com/in/yash-gupta-60962a248/">Yash Gupta</a></li>
+                <li><a href="https://www.linkedin.com/in/vaishnavi-lande-0349aa250/">Vaishnavi Lande</a></li>
+                <li><a href="https://www.linkedin.com/in/rajashree-gudekar-a44074236/">Rajashree Gudekar</a></li>
+                <li><a href="https://www.linkedin.com/in/rishabh-gadpal-7751a5252/">Rishabh Gadpal</a></li>
               </ul>
             </div>
           </div>
@@ -150,13 +142,7 @@
         <div class="container">
           <div class="row">
             <div class="col-md-8 col-sm-6 col-xs-12">
-              <p class="copyright-text">Copyright &copy; 2017 All Rights Reserved by <a href="#">Scanfcode</a>.</p>
-              <ul class="social-icons">
-                <li><a class="facebook" href="#"><i class="fab fa-facebook"></i></a></li>
-                <li><a class="twitter" href="#"><i class="fab fa-twitter"></i></a></li>
-                <li><a class="dribbble" href="#"><i class="fab fa-dribbble"></i></a></li>
-                <li><a class="linkedin" href="#"><i class="fab fa-linkedin"></i></a></li>   
-              </ul>
+              <p class="copyright-text">Copyright &copy; 2024 All Rights Reserved by <a href="/api">JusticeFY😊</a>.</p>
             </div>
 
             <div class="col-md-4 col-sm-6 col-xs-12">

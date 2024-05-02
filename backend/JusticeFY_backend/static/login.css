@@ -1,101 +1,201 @@
+/* Google Fonts - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
 * {
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #ffffff;
+}
+section {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+section::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#fffefe, rgb(63, 164, 195), #fcfcfc);
+  animation: animate 5s linear infinite;
+}
+@keyframes animate {
+  0% {
+    transform: translateY(-100%);
   }
-  
-  body {
-    display: flex;
-    justify-content: center; /* Center content horizontally */
-    align-items: center; /* Center content vertically */
-    font-family: sans-serif;
-    height: 100vh;
-    margin: 0;
-    padding: 0;
-    background-color: #f2f2f2; /* Added a background color */
+  100% {
+    transform: translateY(100%);
   }
-  
-  header {
-    display: none;
-  }
-  
-  .box {
-    background-color: rgba(63, 61, 61, 0.8);
-    border-radius: 10px;
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.8);
-    margin: auto;
-    padding: 40px;
-    position: absolute;
-    top: 50%;
-    left: 20%;
-    transform: translate(-50%, -50%);
-    max-width: 400px; /* Added max-width for responsiveness */
-    width: 50%; /* Added width for responsiveness */
-  }
-  
-  .box h2 {
-    margin: 0;
-    padding: 0;
-    color: #fff;
-    text-align: center;
-    margin-bottom: 30px; /* Increased margin-bottom */
-  }
-  
-  .box .inputBox label {
-    color: #fff;
-  }
-  
-  .box .inputBox input {
-    background: transparent;
-    border: none;
-    border-bottom: 1px solid #fff;
-    color: #fff;
-    font-size: 16px; /* Reduced font size for better readability */
-    letter-spacing: 1px; /* Reduced letter-spacing for better readability */
-    margin-bottom: 20px; /* Reduced margin-bottom for better spacing */
-    outline: none;
-    padding: 8px 0; /* Reduced padding for better alignment */
-    width: 100%;
-  }
-  .User_Type {
-    margin-bottom: 20px; /* Adjust margin-bottom for spacing */
-  }
-  
-  .User_Type label {
-    color: #ffffff; /* Text color */
-    font-weight: bold; /* Make label text bold */
-  }
-  .User_Type select {
-    width: 100%; /* Full width */
-    padding: 8px; /* Padding */
-    border: none; /* Remove default border */
-    border-bottom: 1px solid #fff; /* Add bottom border */
-    background-color: transparent; /* Transparent background */
-    color: #000000; /* Text color */
-    font-size: 16px; /* Font size */
-    outline: none; /* Remove outline */
-    margin-top: 5px; /* Adjust top margin */
-  }
-  
-  .box input[type="submit"],
-  .box button[type="submit"],
-  a.button {
-    background: #03a9f4;
-    border: none;
-    border-radius: 5px;
-    color: #fff;
-    cursor: pointer;
-    font-weight: 600;
-    padding: 10px 20px;
-    text-transform: uppercase;
-    text-decoration: none;
-    margin-right: 10px; /* Adjusted margin-right */
-  }
-  
-  .box input[type="submit"]:hover,
-  .box button[type="submit"]:hover,
-  a.button:hover {
-    opacity: 0.8;
-  }
-  
-  #tsparticles {
-    display: none; /* Removed fixed positioning to hide it for now */
-  }
+}
+section span {
+  position: relative;
+  display: block;
+  width: calc(6.25vw - 2px);
+  height: calc(6.25vw - 2px);
+  background: #ffffff;
+  z-index: 2;
+  transition: 1.5s;
+}
+section span:hover {
+  background: #a0e4e3;
+  transition: 0s;
+}
+
+.container {
+  position: absolute;
+  max-width: 380px;
+  width: 100%;
+  padding: 25px;
+  border-radius: 8px;
+  background: #454343;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 9);
+  z-index: 100;
+}
+.container header {
+  font-size: 30px;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  padding-left: 75px;
+  color: #7fccd3;
+}
+.container form {
+  margin-top: 30px;
+}
+form .field {
+  margin-bottom: 20px;
+}
+form .input-field {
+  position: relative;
+  height: 50px;
+  width: 100%;
+}
+.input-field input,
+.User_Type select {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: none;
+  border-radius: 8px;
+  padding: 0 15px;
+  font-size: 15px;
+  background: #333;
+  color: white;
+  border: 1.5px solid #7ee4eb;
+}
+.invalid input,
+.invalid select {
+  border-color: #7ee4eb;
+}
+.input-field .show-hide {
+  position: absolute;
+  right: 13px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 3px;
+}
+.field .error {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  color: #ff0000;
+  font-size: 14px;
+  display: none;
+}
+.invalid .error {
+  display: flex;
+}
+.error .error-icon {
+  margin-right: 6px;
+  font-size: 15px;
+}
+.create-password .error {
+  align-items: flex-start;
+}
+.create-password .error-icon {
+  margin-top: 4px;
+}
+.button {
+  margin: 25px 0 6px;
+}
+form .links p {
+  color: #ffffff;
+}
+form .links {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+form .links a {
+  color: #fff;
+  text-decoration: none;
+}
+form .links a:nth-child(2) {
+  color: #7ee4eb;
+  font-weight: 600;
+}
+
+.button input {
+  color: black;
+  font-size: 19px;
+  font-weight: 500;
+  background-color: #7ee4eb;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.button input:hover {
+  background-color: rgb(30, 131, 149);
+  color: white;
+}
+
+.button input:active {
+  transform: scale(0.95);
+}
+.User_Type {
+  margin-bottom: 20px;
+  position: relative;
+}
+.User_Type input,
+.User_Type select {
+  height: 50px;
+  width: 100%;
+  outline: none;
+  border: none;
+  border-radius: 8px;
+  padding: 0 15px;
+  font-size: 15px;
+  background: #333;
+  color: white;
+  border: 1.5px solid #7ee4eb;
+}
+.User_Type input {
+  margin-bottom: 5px;
+}
+.User_Type .show-hide {
+  position: absolute;
+  right: 13px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 3px;
+}

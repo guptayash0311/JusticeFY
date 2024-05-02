@@ -7,35 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Register</title>
-    <link rel="stylesheet" href="{% static 'style.css' %}">
-    <link rel="stylesheet" href="{% static 'utils.css' %}">
+    <link rel="stylesheet" href="{% static 'login.css' %}">
 
   </head>
   <body>
-    {% comment %} <h2>User Registration</h2> {% endcomment %}
-    {% comment %} <form method="post">
-        {% csrf_token %}
-        <label for="username">Username:</label><br>
-        <input type="text" id="username" name="username"><br>
-        
-        <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email"><br>
-        
-        <label for="password">Password:</label><br>
-        <input type="password" id="password" name="password"><br>
 
-        <label for="id">User Type:</label><br>
-        <select name="id" id="id">
-            <option value="1">Lawyer</option>
-            <option value="2">Physical Judge</option>
-            <option value="3">Virtual Judge</option>
-        </select><br>
-        
-        <button type="submit">Register</button>
-    </form> {% endcomment %}
-    
-    {% comment %} <p>Already have an account? <a href="/api/login/">Login here</a>.</p> {% endcomment %}
-    <div class="auth">
+    {% comment %} <div class="auth">
       <div class="left"></div>
       <div class="right">
         <main class="box">
@@ -58,7 +35,7 @@
                 type="email"
                 name="email"
                 id="email"
-                placeholder="Enter your password"
+                placeholder="Enter your email"
                 required
               />
             </div>
@@ -85,7 +62,191 @@
           </form>
         </main>
       </div>
+    </div> {% endcomment %}
+    <section>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+
+      <!-- More span elements -->
+    </section>
+
+    <!-- Register Form -->
+    <div class="container">
+      <header>Register</header>
+      <form method="post">
+        {% csrf_token %}
+        <div class="field username-field">
+          <div class="input-field">
+            <input
+              type="text"
+              name="username"
+              id="username"
+              placeholder="Enter your username"
+              required
+            />
+          </div>
+          <span class="error username-error">
+            <i class="bx bx-error-circle error-icon"></i>
+            <p class="error-text">Please enter a valid username</p>
+          </span>
+        </div>
+        <!-- //email -->
+        <div class="field username-field">
+          <div class="input-field">
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Enter your email"
+              required
+            />
+          </div>
+          <span class="error username-error">
+            <i class="bx bx-error-circle error-icon"></i>
+            <p class="error-text">Please enter a valid username</p>
+          </span>
+        </div>
+        <!-- //password -->
+        <div class="field create-password">
+          <div class="input-field">
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Enter your password"
+              required
+            />
+            <i class="bx bx-hide show-hide"></i>
+          </div>
+          <span class="error password-error">
+            <i class="bx bx-error-circle error-icon"></i>
+            <p class="error-text">
+              Please enter at least 8 characters with a number, symbol,
+              lowercase, and uppercase letter.
+            </p>
+          </span>
+        </div>
+        <div class="field User_Type">
+          <div class="links">
+            <p>USER TYPE</p>
+          </div>
+
+          <select id="id">
+            <option value="1">Lawyer</option>
+            <option value="2">Physical Judge</option>
+            <option value="3">Virtual Judge</option>
+          </select>
+        </div>
+
+        <div class="links">
+          <p>Already have an account?</p>
+          <a href="/api/login">Login</a>
+        </div>
+        <div class="input-field button">
+          <input type="submit" value="Register" />
+        </div>
+        <div class="links">
+          <a href="/api/">Back to Homepage</a>
+        </div>
+      </form>
     </div>
-	<script src="index.js"></script>
   </body>
 </html>

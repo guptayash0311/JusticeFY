@@ -1,0 +1,61 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JusticeFY-Case_Details</title>
+    <link rel="stylesheet" href="{% static 'case_details.css' %}">
+  </head>
+  <body>
+       {% comment %} <h1>Case Details</h1>
+    {% if cases %}
+        <ul>
+            {% for case in cases %}
+                <li>{{ case.CNR }} - {{ case.Case_Type }} - {{case.Section_No}} - {{case.Filing_Date}} - {{case.City}} - {{case.Description}}
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No cases found.</p>
+    {% endif %} {% endcomment %}
+
+    <div class="container">
+      <h1>Case Details</h1>
+      <hr class="line" />
+      {% if cases %}
+      {% for case in cases %}
+
+      <div class="case-info">
+        <label for="cnr">CNR NUMBER-</label>
+        <p>{{case.CNR}}</p>
+      </div>
+      <div class="case-info">
+        <label for="case-type">Case Type-</label>
+        <p>{{case.Case_Type}}</p>
+      </div>
+      <div class="case-info">
+        <label for="section-no">Section Number-</label>
+        <p>{{case.Section_No}}</p>
+      </div>
+      <div class="case-info">
+        <label for="filing-date">Filing Date-</label>
+        <p>{{case.Filing_Date}}</p>
+      </div>
+      <div class="case-info">
+        <label for="city">City-</label>
+        <p>{{case.City}}</p>
+      </div>
+      <div class="case-info">
+        <label for="description">Description-</label>
+        <p>{{case.Description}}</p>
+      </div>
+      {% endfor %}
+      {% else %}
+      <p>Enter Proper CNR Number</p>
+      {% endif %} 
+      <a href="/api/">Back to Homepage</a>
+    </div>
+  </body>
+</html>
