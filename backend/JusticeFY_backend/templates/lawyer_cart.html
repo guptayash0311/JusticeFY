@@ -28,7 +28,10 @@
     {% else %}
       <p>No cases found.</p>
     {% endif %} {% endcomment %}
+    
+    {% comment %} <button id="logoutButton" class="btn btn-primary logout-btn">Logout</button> {% endcomment %}
     <main class="table" id="customers_table">
+      <button id="logoutButton" class="btn btn-primary logout-btn">Logout</button>
       <section class="table__header">
         <h1>Lawyer Workspace</h1>
       </section>
@@ -75,5 +78,8 @@
       }
       </script>
     <script src={% static 'js/cart.js'%}></script>
+    <script src={% static 'js/logout.js'%}></script>
+
   </body>
 </html>
+

@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'platform.css' %}" />
+    <title>JusticeFY-VC</title>
+</head>
+<body>
+    <div class="header">
+        <nav>
+            <h1>JusticeFY</h1>
+            <ul>
+                <li><img src="{% static 'images/live.png' %}" class="active"></li>
+                <li><img src="{% static 'images/video.png'%}"></li>
+                <li><img src="{% static 'images/message.png'%}"></li>
+                <li><img src="{% static 'images/notification.png'%}"></li>
+                <li><img src="{% static 'images/users.png'%}"></li>
+                <li><img src="{% static 'images/setting.png'%}"></li>
+            </ul>
+        </nav>
+        <div class="container">
+            <div class="top-icons">
+                <img src="{% static 'images/search.png'%}">
+                <img src="{% static 'images/menu.png'%}">
+            </div>
+            <div class="row">
+                <div class="col-1">
+                    <img src="{% static 'images/image.png'%}" class="host-img">
+                    <div class="cotroles">
+                        <img src="{% static 'images/chat.png'%}">
+                        <img src="{% static 'images/disconnect.png'%}"> 
+                        <img src="{% static 'images/call.png'%}" class="call"> 
+                        <img src="{% static 'images/mic.png'%}"> 
+                        <img src="{% static 'images/cast.png'%}">                 </div>
+                </div>
+                <div class="col-2">
+                    <div class="joined">
+                        <p>People Joined</p>
+                    <div>
+                    <img src="{% static 'images/people-1.png'%}"> 
+                    <img src="{% static 'images/people-2.png'%}"> 
+                    <img src="{% static 'images/people-3.png'%}"> 
+                    <img src="{% static 'images/people-4.png'%}"> 
+                    <img src="{% static 'images/people-5.png'%}"> 
+                </div>
+                </div>
+                <div class="invite">
+                    <p>Invite more people</p>
+                    <div>
+                        <img  src="{% static 'images/user-1.png' %}"> 
+                        <img src="{% static 'images/user-2.png'%}"> 
+                        <img src="{% static 'images/user-3.png'%}"> 
+                        <img src="{% static 'images/user-4.png'%}"> 
+                        <img src="{% static 'images/user-5.png'%}">  
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

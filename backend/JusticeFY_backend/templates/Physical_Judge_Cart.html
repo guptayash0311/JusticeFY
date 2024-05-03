@@ -29,6 +29,8 @@
     {% endif %} {% endcomment %}
     <div class="background-container">
       <main class="table" id="customers_table">
+        <button id="logoutButton" class="btn btn-primary logout-btn">Logout</button>
+
         <section class="table__header">
           <h1>Judge Workspace</h1>
         </section>
@@ -59,11 +61,12 @@
                 <td>{{ case.Filing_Date}}</td>
                 <td>{{ case.Lawyer_Username }}</td>
                 <td>
-                  <button type="button" class="btn btn-primary">Appove</button>
-                </td>
-                <td>
-                  <button type="button" class="btn btn-primary">Deny</button>
-                </td>
+                  <button type="button" class="btn btn-primary" id="redirectVC">Approve</button>
+              </td>
+              <td>
+                  <button type="button" class="btn btn-primary" onclick="showjudgeAlert('Denied')">Deny</button>
+              </td>
+              
               </tr>
               {% endfor %}
             </tbody>
@@ -74,7 +77,13 @@
         </section>
       </main>
     </div>
+    <script>
+      document.getElementById("redirectVC").addEventListener("click", function(){
+        window.location.href="/api/approve/"
+      })
+    </script>
     <script src={% static 'js/cart.js'%}></script>
+    <script src={% static 'js/logout.js'%}></script>
 
   </body>
 </html>

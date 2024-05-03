@@ -14,6 +14,7 @@ body {
   min-height: 100vh;
   background: #ffffff;
 }
+
 section {
   position: absolute;
   width: 100vw;
@@ -30,7 +31,7 @@ section::before {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: linear-gradient(#fffefe, rgb(63, 164, 195), #fcfcfc);
+  background: linear-gradient(#fffefe, #ea984c, #fcfcfc);
   animation: animate 5s linear infinite;
 }
 @keyframes animate {
@@ -51,7 +52,7 @@ section span {
   transition: 1.5s;
 }
 section span:hover {
-  background: #a0e4e3;
+  background: #ea984c;
   transition: 0s;
 }
 
@@ -71,7 +72,7 @@ section span:hover {
   align-items: center;
   font-weight: 600;
   padding-left: 75px;
-  color: #7fccd3;
+  color: rgb(229, 224, 220);
 }
 .container form {
   margin-top: 30px;
@@ -95,11 +96,11 @@ form .input-field {
   font-size: 15px;
   background: #333;
   color: white;
-  border: 1.5px solid #7ee4eb;
+  border: 1.5px solid #ea984c;
 }
 .invalid input,
 .invalid select {
-  border-color: #7ee4eb;
+  border-color: #fffffe;
 }
 .input-field .show-hide {
   position: absolute;
@@ -149,23 +150,41 @@ form .links a {
   text-decoration: none;
 }
 form .links a:nth-child(2) {
-  color: #7ee4eb;
+  color: #ea984c;
   font-weight: 600;
 }
 
+.logout-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  background-color: #ea984c;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Button hover effect */
+.logout-btn:hover {
+  background-color: #ea984c;
+  color: #333;
+}
 .button input {
   color: black;
   font-size: 19px;
   font-weight: 500;
-  background-color: #7ee4eb;
+  background-color: #ea984c;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 .button input:hover {
-  background-color: rgb(30, 131, 149);
-  color: white;
+  background-color: #f4f2f1;
+  color: rgb(15, 14, 14);
 }
-
 .button input:active {
   transform: scale(0.95);
 }
@@ -184,7 +203,7 @@ form .links a:nth-child(2) {
   font-size: 15px;
   background: #333;
   color: white;
-  border: 1.5px solid #7ee4eb;
+  border: 1.5px solid #ea984c;
 }
 .User_Type input {
   margin-bottom: 5px;

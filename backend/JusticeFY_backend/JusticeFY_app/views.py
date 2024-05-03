@@ -21,9 +21,6 @@ def getLawyers(request):
     else:
         return HttpResponse("Login Required")
         
-
-
-
 def createUser(request):
     if request.method == 'POST':
         username = request.POST.get("username")
@@ -88,6 +85,9 @@ def cnr_search(request):
             return redirect('/api/')
     return render(request,'cnr_search.html')
     
-
+def approve(request):
+     return render(request, 'virtual_court.html')
+def platform(request):
+     return render(request, 'platform.html')
         
     

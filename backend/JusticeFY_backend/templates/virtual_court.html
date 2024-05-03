@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'virtual_court.css' %}" />
+
+    <title>Virtual Court</title>
+  </head>
+  <body>
+    <div class="header">
+      <h1>Virtual Court</h1>
+      {% comment %}
+      <img
+        src="https://img.freepik.com/premium-vector/online-conference-video-call-business-meeting-cartoon-man-calling-friends-business-partners-online-education-webinar-new-technology-communication-vector-messenger-app-illustration_176516-2156.jpg"
+        alt="Virtual Court Image"
+        width="200"
+      />
+      {% endcomment %}
+    </div>
+    <div class="container">
+      <div class="card">
+        <img src="{% static 'images\icon1.jpg'%}" />
+        <h2>Attend a virtual Court Hearing or Video Meeting</h2>
+        <p>
+          Virtual Court Navigation can help guide you during online hearing.
+        </p>
+      </div>
+      <div class="card">
+        <img src="{% static 'images\icon2.jpg'%}" />
+        <h2>Learn About Your Legal Issue</h2>
+        <p>
+          Learn how to do legal research and browse resources for your legal
+          problem.
+        </p>
+      </div>
+      <div class="card">
+        <img src="{% static 'images\icon3.jpg'%}" />
+        <h2>Learn About Virtual Court and File Form Online</h2>
+        <p>
+          Learn how virtual court works and submit court forms. Printers and/or
+          scanner are available for free.
+        </p>
+      </div>
+      <div class="card">
+        <img src="{% static 'images\icon4.jpg'%}" />
+        <h2>Get Legal Help</h2>
+        <p>
+          Browse the legal aid directory, find legal help clinics, and how to
+          choose and hire a lawyer.
+        </p>
+      </div>
+    </div>
+    <div class="button-container">
+      <a href="/api/platform" class="button">Go to Another Page</a>
+    </div>
+    <div class="last"></div>
+  </body>
+</html>
