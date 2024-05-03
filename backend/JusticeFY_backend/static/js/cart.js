@@ -240,3 +240,13 @@ const downloadFile = function (data, fileType, fileName = "") {
   a.remove();
 };
 
+function showjudgeAlert(status) {
+  if (status === "Denied") {
+    alert("Application has been denied.");
+    var button = event.target;
+    button.innerHTML = status;
+    button.classList.remove("btn-primary");
+    button.classList.add("btn-danger"); // Change to red
+    button.disabled = true;
+  }
+}

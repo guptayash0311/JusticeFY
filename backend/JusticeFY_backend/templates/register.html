@@ -3,22 +3,21 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Register</title>
-    <link rel="stylesheet" href="{% static 'login.css' %}">
-
+    <link rel="stylesheet" href="{% static 'login.css' %}" />
   </head>
   <body>
-
-    {% comment %} <div class="auth">
+    {% comment %}
+    <div class="auth">
       <div class="left"></div>
       <div class="right">
         <main class="box">
           <h2>Register</h2>
           <form method="post">
-            {% csrf_token %} 
+            {% csrf_token %}
             <div class="inputBox">
               <label for="username">Username</label>
               <input
@@ -62,8 +61,24 @@
           </form>
         </main>
       </div>
-    </div> {% endcomment %}
+    </div>
+    {% endcomment %}
+    <button id="logoutButton" class="btn btn-primary logout-btn">Logout</button>
     <section>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
       <span></span>
       <span></span>
       <span></span>
@@ -226,7 +241,7 @@
         </div>
         <div class="field User_Type">
           <div class="links">
-            <p>USER TYPE</p>
+            <p>User Type</p>
           </div>
 
           <select id="id">
@@ -248,5 +263,6 @@
         </div>
       </form>
     </div>
+    <script src={% static 'js/logout.js'%}></script>
   </body>
 </html>
