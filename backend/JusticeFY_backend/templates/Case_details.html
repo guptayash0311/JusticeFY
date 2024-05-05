@@ -3,29 +3,137 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>JusticeFY-Case_Details</title>
-    <link rel="stylesheet" href="{% static 'case_details.css' %}">
+    <link rel="stylesheet" href="{% static 'case_details.css' %}" />
   </head>
   <body>
-       {% comment %} <h1>Case Details</h1>
+    {% comment %}
+    <h1>Case Details</h1>
     {% if cases %}
-        <ul>
-            {% for case in cases %}
-                <li>{{ case.CNR }} - {{ case.Case_Type }} - {{case.Section_No}} - {{case.Filing_Date}} - {{case.City}} - {{case.Description}}
-            {% endfor %}
-        </ul>
-    {% else %}
-        <p>No cases found.</p>
-    {% endif %} {% endcomment %}
+    <ul>
+      {% for case in cases %}
+      <li>
+        {{ case.CNR }} - {{ case.Case_Type }} - {{case.Section_No}} -
+        {{case.Filing_Date}} - {{case.City}} - {{case.Description}} {% endfor %}
+      </li>
+    </ul>
 
+    {% else %}
+    <p>No cases found.</p>
+    {% endif %} {% endcomment %}
+    <section>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </section>
     <div class="container">
       <h1>Case Details</h1>
       <hr class="line" />
-      {% if cases %}
-      {% for case in cases %}
+      {% if cases %} {% for case in cases %}
 
       <div class="case-info">
         <label for="cnr">CNR NUMBER-</label>
@@ -51,10 +159,9 @@
         <label for="description">Description-</label>
         <p>{{case.Description}}</p>
       </div>
-      {% endfor %}
-      {% else %}
+      {% endfor %} {% else %}
       <p>Enter Proper CNR Number</p>
-      {% endif %} 
+      {% endif %}
       <a href="/api/">Back to Homepage</a>
     </div>
   </body>
