@@ -5,7 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'platform.css' %}" />
-    <title>JusticeFY-VC</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Freeman&family=Poetsen+One&display=swap" rel="stylesheet">
+ <title>JusticeFY-VC</title>
 </head>
 <body>
     <div class="header">
@@ -22,19 +26,25 @@
         </nav>
         <div class="container">
             <div class="top-icons">
-                <img src="{% static 'images/search.png'%}">
-                <img src="{% static 'images/menu.png'%}">
+                    <a href="/api/" class="button">Back to Home page</a>            
             </div>
+            
             <div class="row">
                 <div class="col-1">
-                    <img src="{% static 'images/image.png'%}" class="host-img">
+                    <img src="https://i.pinimg.com/564x/9d/ba/d8/9dbad8da42df6e45f836887e92bf805a.jpg" class="host-img">
                     <div class="cotroles">
                         <img src="{% static 'images/chat.png'%}">
                         <img src="{% static 'images/disconnect.png'%}"> 
                         <img src="{% static 'images/call.png'%}" class="call"> 
                         <img src="{% static 'images/mic.png'%}"> 
-                        <img src="{% static 'images/cast.png'%}">                 </div>
+                        <img src="{% static 'images/cast.png'%}">                
+                    </div>
+                    
                 </div>
+                {% comment %} <div class="button-container">
+                    <a href="/api/platform" class="button"> Go to Demo Virtual Court </a>
+                  </div> {% endcomment %}
+                <div class="col-2">
                 <div class="col-2">
                     <div class="joined">
                         <p>People Joined</p>
@@ -59,5 +69,8 @@
             </div>
         </div>
     </div>
+    {% comment %} <div class="button-container">
+        <a href="/api/" class="button"> back to Home page </a>
+    </div> {% endcomment %}
 </body>
 </html>
