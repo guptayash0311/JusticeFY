@@ -60,17 +60,18 @@ nav ul li img:hover {
 }
 .container {
   margin-left: 120px;
-  padding: 0 2.5%;
+  margin-right: 120px; /* Add margin-right for desktop layout */
+  max-width: 1200px; /* Limit container width */
 }
 .top-icons {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  padding: 25px 0;
+  margin-right: 40px; /* Change padding to margin for spacing */
 }
 .top-icons img {
   width: 25px;
-  margin-left: 40px;
+  margin-left: 20px; /* Adjust margin for spacing */
   cursor: pointer;
 }
 .row {
@@ -79,7 +80,7 @@ nav ul li img:hover {
   justify-content: space-between;
 }
 .col-1 {
-  flex-basis: 65%;
+  flex-basis: 75%;
 }
 .col-2 {
   flex-basis: 40%;
@@ -109,43 +110,52 @@ nav ul li img:hover {
 .joined {
   background: #ea9d54;
   border-radius: 15px;
-  padding: 20px 20px 40px;
+  padding: 10px 10px 20px;
   color: #000000;
-  font-family: "Freeman", sans-serif;
+  font-family: "Poetsen One", sans-serif;
+  font-weight: 900;
+  font-size: large;
+  font-style: normal;
+}
+.joined p {
+  font-family: "Poetsen One", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 .joined div {
   margin-top: 20px;
   display: grid;
-  grid-template-columns: auto auto auto;
-  grid-gap: 20px;
+  grid-template-columns: repeat(2, 1fr); /* Arrange images in 2 columns */
+  grid-gap: 9px;
 }
 .joined img {
-  width: 100%;
-  border-radius: 10px;
+  width: 60%;
+  border-radius: 8px;
   cursor: pointer;
 }
 .invite {
   background: #f8a65a;
   border-radius: 15px;
-  padding: 30px 40px 50px;
+  padding: 25px 30px 40px;
   color: #0c0b0b;
   margin-top: 20px;
-  font-family: "Freeman", sans-serif;
+}
+
+.invite p {
+  font-family: "Poetsen One", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 .invite img {
   margin-top: 20px;
-  width: 50px;
+  width: 40px;
   margin-left: 5px;
   border-radius: 50%;
   cursor: pointer;
 }
 
 .button-container {
-  text-align: center;
+  text-align: right;
   margin-top: 20px;
   transition: all 0.3s ease;
   position: absolute;
